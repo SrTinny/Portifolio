@@ -200,7 +200,7 @@ section.sobre .flex {
 }
 
 /* ESTILO DO PORTIFOLIO */
-section.portifolio {
+.portifolio {
   position: relative;
   padding: 80px 4%;
   max-width: 100%;
@@ -216,7 +216,22 @@ section.portifolio {
 .carousel {
   display: flex;
   flex-flow: row nowrap;
+  overflow: hidden;
+  outline: none;
 }
+
+.carousel .flex{
+  gap: 20px;
+}
+
+.flex-carousel::-webkit-scrollbar {
+  display: none;
+}
+.flex-carousel{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 
 .img-port {
   width: 360px;
@@ -282,10 +297,6 @@ section.portifolio {
 
 .arrow-left:hover, .arrow-right:hover{
   opacity: 1;
-}
-
-.item {
-  
 }
 
 /* ESTILO DO FORMULARIO */
