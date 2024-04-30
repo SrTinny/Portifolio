@@ -209,11 +209,11 @@ section.sobre .flex {
 }
 
 .portifolio .interface {
- overflow-x: auto;
  position: relative;
 }
 
 .carousel {
+  padding: 40px 0%;
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
