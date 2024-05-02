@@ -1,0 +1,82 @@
+@media screen and (max-width: 1020px) {
+  /* Classes gerais */
+  .topo-do-site .flex {
+    flex-direction: column-reverse;
+  }
+
+  h2.titulo {
+    font-size: 34px;
+    line-height: 30px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+ 
+
+  /* Cabeçalho */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /* Topo do site */
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Especialidades */
+  section.especialidades {
+    padding: 40px 8%;
+  }
+
+  section.especialidades .flex {
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+
+  .especialidades .especialidades-box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .especialidades .especialidades-box img {
+    height: 50px; /* Corrigi a unidade de medida */
+    width: 50px; /* Corrigi a unidade de medida */
+  }
+
+  /* Portfólio */
+  .portifolio .arrow-left,
+  .portifolio .arrow-right {
+    display: none; /* Removemos os botões de navegação */
+  }
+
+  .portifolio .carousel {
+    cursor: pointer;
+    touch-action: pan-y; /* Permitimos que o usuário deslize horizontalmente */
+  }
+
+  /* Sobre */
+  section.sobre {
+    padding: 80px 8%;
+  }
+
+  .flex .btn-social {
+    gap: 0px;
+  }
+}
