@@ -1,4 +1,4 @@
-/* ESTILO GERAL */
+/* Estilo geral */
 * {
   margin: 0;
   padding: 0;
@@ -47,15 +47,14 @@ form .btn-enviar input:hover {
   transform: scale(1.05);
 }
 
-/* ESTILO DO CABEÇALHO */
-
+/* Estilo do cabeçalho */
 header {
   position: fixed;
   width: 100%;
   z-index: 1;
 }
 
-header > .interface { 
+header > .interface {
   padding: 10px 0%;
   display: flex;
   align-items: center;
@@ -84,9 +83,9 @@ header nav ul li {
   padding: 0px 40px;
 }
 
-/* ESTILO DO TOPO DO SITE */
+/* Estilo do topo do site */
 section.topo-do-site .flex {
-  padding: 80px 4%;
+  padding: 100px 4%;
   align-items: center;
   justify-content: center;
   gap: 90px;
@@ -111,6 +110,8 @@ section.topo-do-site .flex {
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
   border-radius: 50%;
+  width: 500px;
+  height: 500px;
 }
 
 @keyframes flutuar {
@@ -122,24 +123,30 @@ section.topo-do-site .flex {
   }
 }
 
-/* ESTILO DAS ESPECIALIDADES */
+/* Estilo das especialidades */
 section.especialidades {
   padding: 80px 4%;
 }
 
 section.especialidades .flex {
+  display: grid;
   gap: 60px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .especialidades .especialidades-box {
-  width: 200px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
   color: #fff;
   padding: 40px;
   margin-top: 45px;
   border-radius: 20px;
   transition: 0.2s;
   text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .especialidades .especialidades-box:hover {
@@ -148,8 +155,8 @@ section.especialidades .flex {
 }
 
 .especialidades .especialidades-box img {
-  height: 60;
-  width: 60;
+  height: 60px; /* Corrigi a unidade de medida */
+  width: 60px; /* Corrigi a unidade de medida */
 }
 
 .especialidades .especialidades-box h3 {
@@ -157,7 +164,7 @@ section.especialidades .flex {
   margin: 15px 0;
 }
 
-/* ESTILO DO SOBRE */
+/* Estilo do sobre */
 section.sobre {
   padding: 80px 4%;
 }
@@ -199,7 +206,7 @@ section.sobre .flex {
   transition: 0.2s;
 }
 
-/* ESTILO DO PORTIFOLIO */
+/* Estilo do portfólio */
 .portifolio {
   position: relative;
   padding: 80px 4%;
@@ -209,7 +216,7 @@ section.sobre .flex {
 }
 
 .portifolio .interface {
- position: relative;
+  position: relative;
 }
 
 .carousel {
@@ -220,18 +227,17 @@ section.sobre .flex {
   outline: none;
 }
 
-.carousel .flex{
+.carousel .flex {
   gap: 20px;
 }
 
 .flex-carousel::-webkit-scrollbar {
   display: none;
 }
-.flex-carousel{
+.flex-carousel {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 
 .img-port {
   width: 360px;
@@ -270,7 +276,8 @@ section.sobre .flex {
   opacity: 1;
 }
 
-.arrow-left, .arrow-right{
+.arrow-left,
+.arrow-right {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -289,17 +296,18 @@ section.sobre .flex {
   transition: all 600ms ease-in-out;
 }
 
-.arrow-right{
+.arrow-right {
   left: auto;
   right: 0;
   background: linear-gradient(to right, transparent 0%, black 200%);
 }
 
-.arrow-left:hover, .arrow-right:hover{
+.arrow-left:hover,
+.arrow-right:hover {
   opacity: 1;
 }
 
-/* ESTILO DO FORMULARIO */
+/* Estilo do formulário */
 section.formulario {
   padding: 80px 4%;
 }
@@ -345,7 +353,7 @@ form .btn-enviar input {
   transition: 0.2s;
 }
 
-/* ESTILO DO RODAPE */
+/* Estilo do rodapé */
 footer {
   padding: 60px 4%;
   box-shadow: 0 0 20px 5px #9b9b9b;
@@ -373,7 +381,7 @@ footer .line-footer p a {
 }
 
 @media screen and (max-width: 1020px) {
-  /* CLASSES GERAIS */
+  /* Classes gerais */
   .topo-do-site .flex {
     flex-direction: column-reverse;
   }
@@ -387,13 +395,13 @@ footer .line-footer p a {
     flex-direction: column;
   }
 
-  /* CABEÇALHO */
+  /* Cabeçalho */
   .menu-desktop,
   .btn-contato {
     display: none;
   }
 
-  /* TOPO DO SITE */
+  /* Topo do site */
   section.topo-do-site .flex {
     gap: 40px;
   }
@@ -410,12 +418,34 @@ footer .line-footer p a {
     width: 100%;
   }
 
-  /* ESPECIALIDADES */
+  /* Especialidades */
   section.especialidades {
     padding: 40px 8%;
   }
 
-  /* SOBRE */
+  .especialidades .especialidades-box {
+    width: 100px;
+    height: 120px;
+    display: inline-block;
+  }
+
+  .especialidades .especialidades-box img {
+    height: 40px; /* Corrigi a unidade de medida */
+    width: 40px; /* Corrigi a unidade de medida */
+  }
+
+  /* Portfólio */
+  .portifolio .arrow-left,
+  .portifolio .arrow-right {
+    display: none; /* Removemos os botões de navegação */
+  }
+
+  .portifolio .carousel {
+    cursor: pointer;
+    touch-action: pan-y; /* Permitimos que o usuário deslize horizontalmente */
+  }
+
+  /* Sobre */
   section.sobre {
     padding: 80px 8%;
   }
