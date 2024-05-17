@@ -135,7 +135,10 @@ section.especialidades .flex {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+
+
 .especialidades .especialidades-box {
+  display: flex;
   width: 180px;
   height: 180px;
   color: #fff;
